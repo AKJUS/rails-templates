@@ -206,6 +206,10 @@ after_bundle do
   ########################################
   run "curl -L https://raw.githubusercontent.com/lewagon/rails-templates/master/.rubocop.yml > .rubocop.yml"
 
+  # CI
+  ########################################
+  remove_file ".github/workflows/ci.yml"
+
   # Git
   ########################################
   git :init
